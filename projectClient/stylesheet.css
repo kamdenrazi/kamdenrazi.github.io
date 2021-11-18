@@ -1,0 +1,99 @@
+.wrapper{
+    align-items: center;
+    text-align: left;
+    background-color: #424242;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 15vw;
+    padding-top: 3vh;
+    padding-right: 15vw;
+    color : sandybrown
+}
+.button {
+    background-color: grey;
+    color:sandybrown;
+    transition-duration: 0.4s;
+}
+.button:hover {
+    background-color: lightgreen; 
+    color: black;
+}
+
+
+li{
+    padding: 0.5rem 0rem 0rem 1rem;
+    list-style-type: none;
+    transition-duration: 0.3s;
+}
+/* li:hover{
+    color: green;
+    font-weight: bold;
+
+} */
+hr{
+    border: 1px solid whitesmoke;
+    margin-top: 1rem;
+
+}
+input{
+    color: sandybrown;
+    width: 10rem;
+    background-color: grey;
+    text-emphasis-color: whitesmoke;
+}
+::placeholder{
+    color: sandybrown;
+}
+
+.completeButton{
+    height: 1rem;
+    width: 1rem;
+    background-color: darkred;
+    color: whitesmoke;
+    border: none;
+    border-radius: 70%;
+    text-align: center;
+    transition-duration: .4s;
+    padding: 0px;
+    margin-top: .5rem;
+
+}
+.completeButton:hover{
+    background-color: green;
+    color: black;
+}
+
+.editButton {
+    background-color: grey;
+    color:sandybrown;
+    transition-duration: 0.4s;
+    margin-left: 1rem;
+}
+.editButton:hover {
+    background-color: sandybrown; 
+    color: black;
+}
+
+.task{
+    font-size: 22px;
+    display: inline;
+    padding-left: .5rem;
+
+}
+.taskDetails, .dueDate, .priority, .progress, .reference{
+    font-size: 12px;
+    display: inline;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-bottom: 1rem;
+
+}
+.dueDate{
+    padding-left: 2.75rem;
+
+}
+/* .newTask{
+    display: none;
+} */
+#newTaskButton{
+    margin-top: .5rem;
+}

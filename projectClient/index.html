@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Tasks To Do</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="wrapper">
+
+
+        <h1>
+            Personal Task List
+        </h1>
+        <!-- Initial Buttons -->
+        <div id="startButtons">
+            <button class="button" id="startLogin">Login</button>
+            <button class="button" id="startSignUp">Sign Up</button>
+
+        </div>
+
+        <!-- Task view -->
+        <div id="mainAllTasks">
+
+            <h4>
+                Great place to save all of your tasks you need to accomplish.
+            </h4>
+
+            <ul id="taskList"></ul>
+
+            <button class="button" id="newTaskButton">New Task</button>
+
+            <div class="newTask" style="display: none;">
+                <h3>
+                    New Task 
+                </h3>
+                <div id = "taskList">
+                    <input type="text" id="task" placeholder="Task">
+
+                    <input type="text" id="dueDate" placeholder="Due">
+
+                    <input type="text" id="priority" placeholder="Priority">
+
+                    <input type="text" id="progress" placeholder="Progress">
+
+                    <input type="text" id="reference" placeholder="Class">
+                    <br>
+                    
+                </div>
+
+                <br>
+                <button class="button" id="saveTaskBtn">Save Task</button><br>
+
+                <br>
+
+                <h3 id="#H3"></h3>
+
+                <br>
+
+
+            </div>
+        </div>
+        
+        <!-- Login -->
+        <div id="mainLogin">
+            <h2>Log into the Task Page</h2>
+
+            <div id = "loginBlock">
+                <input type="text" id="loginEmail" placeholder="email">
+
+                <input type="password" id="loginPassword" placeholder="password">
+
+                <button class="button" id="loginLogin">Log In</button>
+            
+                <br>
+                
+            </div>
+        </div>
+
+        <!-- Create New User -->
+        <div id="mainSignUp">
+            <h2>Sign Up for Task Page</h2>
+
+            <div id = "signUpBlock">
+                <input type="text" id="signUpEmail" placeholder="Email"> <br>
+
+                <input type="text" id="signUpFirstName" placeholder="First Name"><br>
+
+                <input type="text" id="signUpLastName" placeholder="Last Name"><br>
+
+                <input type="password" id="signUpPassword" placeholder="Password"><br>
+                
+                <br>
+                <button class="button" id="signUpButton">Sign Up</button>
+            
+                <br>
+                
+            </div>
+        </div>
+
+        <script src="program.js"></script>
+    </body>
+
+</html>
+
