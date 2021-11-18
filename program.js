@@ -66,7 +66,7 @@ function createTaskOnServer(task, dueDate, priority, progress, reference){
     + "&reference=" + encodeURIComponent(reference));
     //console.log(taskData)
 
-    fetch("http://localhost:8080/tasks", { 
+    fetch("https://kamden-my-tasks-app.herokuapp.com/tasks", { 
         method: "POST",
         body: taskData,
         credentials: 'include',
@@ -91,7 +91,7 @@ function updateTaskOnServer(taskID, task, dueDate, priority, progress, reference
     + "&reference=" + encodeURIComponent(reference));
     //console.log(taskData)
 
-    fetch("http://localhost:8080/tasks/" + taskID, {
+    fetch("https://kamden-my-tasks-app.herokuapp.com/tasks/" + taskID, {
         method: "PUT",
         body: taskData,
         credentials: 'include',
@@ -104,7 +104,7 @@ function updateTaskOnServer(taskID, task, dueDate, priority, progress, reference
 }
 
 function deleteTaskOnServer(taskID){
-    fetch("http://localhost:8080/tasks/" + taskID,{
+    fetch("https://kamden-my-tasks-app.herokuapp.com/tasks/" + taskID,{
     method: "DELETE",
     credentials: 'include',
     }).then(function() {
@@ -114,7 +114,7 @@ function deleteTaskOnServer(taskID){
 
 function loadTasksFromServer(){ // need to call
 
-    fetch("http://localhost:8080/tasks",{
+    fetch("https://kamden-my-tasks-app.herokuapp.com/tasks",{
     credentials: 'include',
     
     }).then(function(response) {
@@ -131,6 +131,7 @@ function loadTasksFromServer(){ // need to call
             mainAllTasks.style.display = "block";
             mainStartButtons.style.display = "none";
             printOutEachTask(dataFromServer)
+            console.log(dataFromServer)
 
         }); 
     });
@@ -169,7 +170,7 @@ function printOutEachTask(dataFromServer){
         newTask.appendChild(completeDiv);
 
         var dueDateItem = document.createElement("div");
-        dueDateItem.innerHTML = " Days/Due: " + task.dueDate;
+        dueDateItem.innerHTML = " Days/Due: " + task.duedate;
         dueDateItem.classList.add("dueDate");
         //dueDateItem.classList.add("dueDate", "taskDetails");
         newTask.appendChild(dueDateItem);
@@ -205,7 +206,7 @@ function printOutEachTask(dataFromServer){
             editButton.innerHTML = "Save";
 
             taskItem.innerHTML = '<input id="taskNew" value="' + task.task + '">';
-            dueDateItem.innerHTML = '<input id="dueDateNew" value="' + task.dueDate + '">';
+            dueDateItem.innerHTML = '<input id="dueDateNew" value="' + task.duedate + '">';
             priorityItem.innerHTML = '<input id="priorityNew" value="' + task.priority + '">';
             progressItem.innerHTML = '<input id="progressNew" value="' + task.progress + '">';
             referenceItem.innerHTML = '<input id="referenceNew" value="' + task.reference + '">';
@@ -262,7 +263,7 @@ function loginServerGO(userEmail, userPassword){
     var userData = "email=" + encodeURIComponent(userEmail) + "&password=" + encodeURIComponent(userPassword);
     console.log(userData)
 
-    fetch("http://localhost:8080/sessions", {
+    fetch("https://kamden-my-tasks-app.herokuapp.com/sessions", {
         method: "POST",
         body: userData,
         credentials: "include",
@@ -295,7 +296,7 @@ function signUpServerGO(userEmail, userFirstName, userLastName, userPassword){
         "&password=" + encodeURIComponent(userPassword));
 
     console.log(userData)
-    fetch("http://localhost:8080/users", {
+    fetch("https://kamden-my-tasks-app.herokuapp.com/users", {
         method: "POST",
         body: userData,
         credentials: "include",
